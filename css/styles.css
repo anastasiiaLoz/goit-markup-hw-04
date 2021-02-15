@@ -55,7 +55,7 @@ body {
 /*____________ Header_____________ */
 
 header {
-  border-bottom: 1px solid#2F303A;
+  border-bottom: 1px solid #ECECEC;
   background-color: var(--white-color);
 }
 
@@ -69,6 +69,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 
 /* ______________LOGO_________________ */
 
@@ -119,11 +120,6 @@ header {
   color: var(--accent-color);
 }
 
-.auth-nav .mail-link:hover,
-.auth-nav .phone-link:hover {
-  color: var(--accent-color);
-}
-
 .site-nav {
   display: flex;
 }
@@ -144,30 +140,42 @@ header {
 .auth-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: 331px;
 }
 
+.auth-nav-envelope {
+  margin-right: 10px;
+}
+
+  .auth-nav .mail-link{
+    margin-right: 30px;
+  }
+
 .auth-nav li:last-child{
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .auth-nav a:focus {
   color: var(--accent-color);
 }
 
-.auth-nav .mail-link:hover {
+.auth-nav .mail-link:hover,
+.auth-nav .phone-link:hover {
   color: var(--accent-color);
+  cursor: pointer;
 }
 
-.auth-nav .phone-link {
-  color: var(--primary-text-color);
+.auth-nav .svg::before {
+  content: "";
+  fill: var(--primary-text-color);
 }
 
-.auth-nav .mail-link:focus,
-.auth-nav .phone-link:focus {
-  color: var(--accent-color);
+.auth-nav svg:hover::after {
+  content: "";
+  fill: var(--accent-color);
+  cursor: pointer;
 }
-
 
 /* ______________Banner Section_____________*/
 
@@ -176,14 +184,9 @@ header {
   padding-bottom: 200px;
   height: 600px;
   max-width: 1600px;
-  background-color: var(--banner-footer-background-color);
   margin-left: auto;
   margin-right: auto;
-}
-
-
-.banner {
-  background-color: var(--banner-footer-background-color);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4),rgba(47, 48, 58, 0.4)), url(../images/banner.jpg), url(../images/Bg.jpg);
 }
 
 .banner-title {
@@ -216,7 +219,7 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin: 0 auto;
-  padding-top: ;
+  
 }
 
 .visually-hidden {
@@ -255,6 +258,33 @@ header {
 .specials-text {
   width: 270px;
   color: var(--primary-text-color);
+}
+
+.specials-text::before {
+  display: block;
+  content: "";
+  height: 120px;
+  border-radius: 4px;
+  background: #F5F4FA;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/svg.images/antenna\ 1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/svg.images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/svg.images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/svg.images/astronaut.svg);
 }
 
 .specials-box {
@@ -302,27 +332,29 @@ header {
 
 .team-section {
   padding-top: 94px;
-  padding-bottom: 94px;
+  max-width: 1600px;
+  height: 708px;
   background-color: var(--secondary-background-color);
-}
-
-.team-box {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
+  
 }
 
 .team-card {
+  display: block;
   margin-right: 30px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px; 
-  flex-basis: calc(100% / 4 - 30px);
 } 
 
 .team-card:last-child {
-  margin-bottom: 0;
+  margin-right: 0;
 }
+
+.team-box {
+  display: flex;
+  align-items: center;
+}
+
 
 .team-description h3{
   font-weight: 500;
@@ -348,12 +380,121 @@ header {
   max-width: 100%;
   align-items: center;
   text-align: center;
-  padding-bottom: 30px;
+}
+
+
+/* _____________Team Social Links__________ */
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  margin-bottom: 30px;
+}
+.team-links {
+  display: block;
+  content: "";
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  color: #AFB1B8;
+}
+
+.icon-media {
+  display: block;
+  content: "";
+  justify-content: center;  
+}
+
+.icon-media:not(:last-child) {
+  margin-right: 0px;
+}
+
+.icon-media {
+  fill: var(--secondary-background-color);
+}
+
+.team-links:hover {
+  fill: var(--accent-color);
+  border-radius: 50%;
+}
+
+
+
+
+/* _____________Clients Section____________ */
+
+.clients-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  margin-bottom: 50px;
+}
+
+.clients-company {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-example::before {
+  display: block;
+  content: "";
+  height: 90px;
+  width: 170px;
+  margin-right: 30px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  background-size: contain;
+  background: var(--white-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clients-example:hover::before {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.icon-yaAndCo:hover::before{
+  fill: var(--accent-color);
+}
+
+.icon-yaAndCo::before {
+  background-image: url(../images/svg.images/ya.svg)
+}
+
+.icon-tagline-here::before {
+  background-image: url(../images/svg.images/tag-line.svg)
+}
+
+.icon-company-leaf::before {
+  background-image: url(../images/svg.images/leaf.svg)
+}
+
+.icon-foster-peters::before {
+  background-image: url(../images/svg.images/foster.svg)
+}
+
+.icon-brand::before {
+  background-image: url(../images/svg.images/brand.svg)
+}
+
+.icon-tag-line::before {
+  background-image: url(../images/svg.images/tagline.svg)
 }
 
 /* _____________Footer section____________*/
 
 footer {
+  display: flex;
   background-color: var(--banner-footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -374,6 +515,19 @@ footer {
   flex-direction: column;
   margin-top: 9px;
 }
+
+.footer-info {
+  display:flex;
+  justify-content: center;
+}
+.footer-media::before {
+  display: block;
+  content: "";
+
+}
+
+
+
 
 /* ______!!!!________Портфолио_____!!!!_____Projects Section________ */
 
@@ -457,8 +611,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
-  margin-bottom: 30px;
-  margin-bottom: 94px;
+  padding-bottom: 94px;
   flex-basis: calc(100%/9 - 30px);
 }
 
