@@ -13,8 +13,9 @@
 
 <body>
     <!-- Header  --> 
-        <header class="container">
-            <nav class="header-nav">
+        <header>
+            <div class="container">   
+                <nav class="header-nav">
                     <a class="header-logo"  href="/"><span class="logoWeb">Web</span><span class="header-logoStudio">Studio</span></a>
                     <ul class="site-nav list">
                         <li><a href="" class="link current"> Студия</a></li>
@@ -26,20 +27,19 @@
                             <svg class="envelope" width="16px" height="12px"> 
                                 <use href="./testSprite.svg#envelope"> </use>
                             </svg>
+                            
+                            <a href="mailto:info@devstudio.com" class="mail-link">info@devstudio.com</a></>
                         </li>
-
-                        <li><a href="mailto:info@devstudio.com" class="mail-link">info@devstudio.com</a></li>
-                        
-                        <li>
+                        <li class="auth-nav-smartphone">     
                             <svg class="smartphone" width="10px" height="16px">
                                 <use href="./testSprite.svg#smartphone"></use>
                             </svg>
+                            <a href="tel:+380961111111" class="phone-link">+38 096 111 11 11</a>
                         </li>
-                        
-                        <li><a href="tel:+380961111111" class="phone-link">+38 096 111 11 11</a></li>
                         
                     </ul>
                 </nav>
+            </div>
         </header> 
 
     <main>
@@ -52,8 +52,9 @@
         </section>
         
         <!--Specialties section-->
-        <section class="specials-section container">
+        <section class="specials-section">
             <!-- Title Особенности позже скроется -->
+            <div class="container"> 
             <h2 class="visually-hidden">Особенности</h2>
             <ul class="specials-box">
                 <li class="specials-text icon-antenna"> 
@@ -77,20 +78,24 @@
                     <p class="specials-section-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
             </ul>
+            </div>
         </section>
         
         <!--What do we do section-->
-        <section class="work-section container">
+        <section class="work-section">
+            <div class="container"> 
             <h2 class="work-section-title">Чем мы занимаемся</h2>
             <ul class="work-section-images">
                 <li><img src="./images/box 1.jpg" alt="Close up image of programer working on his desk office" width="370"></li>
                 <li><img src="./images/box 2.jpg" alt="Web UI designers are developing application smartphones team creators is working interface mobile phones" width="370"></li>
                 <li><img src="./images/box 3.jpg" alt="Creative artist web designer with working color selection graphic tablet" width="370"></li>
             </ul>
+            </div>
         </section>
         
         <!--Our Team section-->
-        <section class="team-section container">
+        <section class="team-section">
+            <div class="container">    
             <h2 class="team-section-title">Наша команда</h2>
                 <ul class="team-box">
                 <li class="team-card">
@@ -268,9 +273,10 @@
             </ul>
         </section>
         
-        <section class="clients-section container">
-            <h2 class="clients-title"> Постоянные клиенты</h2>
-            <ul class="clients-company">
+        <section class="clients-section">
+            <div class="container">   
+                <h2 class="clients-title"> Постоянные клиенты</h2>
+                <ul class="clients-company">
                 <li class="clients-example icon-yaAndCo">
                     <a class="clients-link" href="#" target="blank" class="link"></a></li>
 
@@ -289,6 +295,7 @@
                 <li class="clients-example icon-tag-line">
                     <a href="#" target="blank" class="link"></a></li>
             </ul>
+            </div>
         </section>
 
 
